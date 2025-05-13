@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify
 from chat import initialize_vector_store, get_response
+from flask_cors import CORS
 
+CORS(app)
 app = Flask(__name__)
 
 # Initialize vector DB on startup
